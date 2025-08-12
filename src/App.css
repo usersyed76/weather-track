@@ -1,0 +1,225 @@
+body {
+    margin: 0;
+    background: #eceeff;
+}
+
+.backdrop {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f0f4fd 0%, #c7e6fb 45%, #d9d4fa 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown-bar {
+    width: 355px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.city-dropdown {
+    width: 140px;
+    font-size: 1.1rem;
+    padding: 6px 14px;
+    margin: 0 0 8px 2px;
+    background: #eaf6ff;
+    border-radius: 8px;
+    border: none;
+    color: #222;
+    font-weight: bold;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+    outline: none;
+}
+
+.weather-main-card {
+    position: relative;
+    width: 370px;
+    padding: 2.3rem 2.2rem 1.4rem 2.2rem;
+    border-radius: 28px;
+    background: linear-gradient(134deg, #82e0fa 0%, #a497fe 100%);
+    box-shadow: 0px 18px 44px -10px rgba(138, 148, 222, 0.19);
+    overflow: hidden;
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+}
+
+.weather-bg-icon {
+    position: absolute;
+    top: 15%;
+    right: 10%;
+    font-size: 5.8rem;
+    opacity: 0.19;
+    color: #fff;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.8rem;
+    position: relative;
+    z-index: 1;
+}
+
+.search-input {
+    flex: 1;
+    font-size: 1.1rem;
+    font-weight: 500;
+    background: rgba(255, 255, 255, 0.3);
+    border: none;
+    border-radius: 22px;
+    padding: 0.6rem 1.2rem 0.6rem 2.5rem;
+    outline: none;
+    color: #fff;
+    margin-right: 6px;
+    box-shadow: 0 2px 8px rgba(150, 180, 240, 0.02);
+}
+
+.search-input::placeholder {
+    color: #f4f9fd;
+    opacity: 0.85;
+}
+
+.search-btn,
+.refresh-btn {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.18rem;
+    margin-left: 4px;
+    cursor: pointer;
+    transition: filter 0.2s;
+    padding: 0.3rem 0.45rem;
+    border-radius: 100px;
+}
+
+.search-btn:hover,
+.refresh-btn:hover {
+    background: rgba(240, 240, 250, 0.19);
+    filter: brightness(1.35);
+}
+
+.loading-block {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-weight: 600;
+    font-size: 1.08rem;
+    margin: 30px 0 18px 0;
+    min-height: 70px;
+}
+
+.error-block {
+    color: #fff0f3;
+    background: rgba(220, 65, 80, 0.65);
+    font-weight: bold;
+    padding: 18px;
+    min-height: 70px;
+    margin: 18px 0;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.city-block {
+    margin-bottom: 12px;
+    text-align: center;
+    z-index: 1;
+}
+
+.city-name {
+    font-size: 1.68rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1;
+    letter-spacing: 0.01em;
+}
+
+.current-date {
+    font-size: 1rem;
+    color: #eef7fa;
+    margin-top: 2px;
+    letter-spacing: 0.01em;
+}
+
+.info-group {
+    display: flex;
+    align-items: center;
+    margin-top: 16px;
+    justify-content: space-between;
+}
+
+.weather-info {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.main-icon {
+    font-size: 2.5rem;
+    color: #fffbe0;
+    margin-right: 5px;
+    margin-top: -7px;
+}
+
+.info-title {
+    font-size: 1.22rem;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.1;
+}
+
+.info-label {
+    font-size: 1.07rem;
+    color: #d6f8ff;
+    margin-top: 2px;
+}
+
+.weather-temp {
+    font-size: 3.9rem;
+    color: #fff;
+    font-weight: 400;
+    text-shadow: 2px 2px 7px rgba(40, 40, 60, 0.12);
+}
+
+.details-group {
+    margin: 28px 0 6px 0;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 1.1rem;
+    color: #e3e8fc;
+    font-weight: 500;
+    gap: 8px 22px;
+}
+
+.details-item {
+    min-width: 48%;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin-bottom: 2px;
+}
+
+.details-item i {
+    font-size: 1rem;
+}
+
+.timestamp {
+    text-align: right;
+    color: #e8effa;
+    font-size: 0.92rem;
+    margin-top: 10px;
+}
+
+@media (max-width:500px) {
+    .weather-main-card {
+        width: 96vw;
+        min-width: 0;
+        padding: 6vw 5vw;
+    }
+
+    .dropdown-bar {
+        width: 97vw;
+    }
+}
